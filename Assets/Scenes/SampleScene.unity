@@ -1260,6 +1260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   room: {fileID: 1064874994}
+  wallMaterial: {fileID: 2100000, guid: 19ecd9d48b563a44e825d62607bcf121, type: 2}
 --- !u!114 &1064874997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1278,6 +1279,7 @@ MonoBehaviour:
   windowWidth: 1.2
   windowHeight: 1
   windowBottomOffset: 1
+  wallMaterial: {fileID: 2100000, guid: 19ecd9d48b563a44e825d62607bcf121, type: 2}
 --- !u!1 &1174750681
 GameObject:
   m_ObjectHideFlags: 0

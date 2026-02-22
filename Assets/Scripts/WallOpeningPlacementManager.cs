@@ -13,6 +13,10 @@ public class WallOpeningPlacementManager : MonoBehaviour
     [SerializeField] private float windowHeight = 1f;
     [SerializeField] private float windowBottomOffset = 1f;
 
+    [Header("Material")]
+    [SerializeField] private Material wallMaterial;
+
+
     private enum Mode { None, Door, Window }
     private Mode currentMode = Mode.None;
 
@@ -126,6 +130,7 @@ public class WallOpeningPlacementManager : MonoBehaviour
 
         part.transform.localScale = new Vector3(width, height, thickness);
         part.transform.localRotation = original.localRotation;
+        part.GetComponent<Renderer>().material = wallMaterial;
 
         part.transform.localPosition =
             original.localPosition +
