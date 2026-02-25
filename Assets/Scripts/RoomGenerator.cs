@@ -59,7 +59,7 @@ public class RoomGenerator : MonoBehaviour
         wall.transform.localScale = scale;
         wall.transform.localPosition = localPosition;
         wall.transform.localRotation = rotation;
-        wall.GetComponent<Renderer>().material =wallMaterial;
+        wall.GetComponent<Renderer>().material = wallMaterial;
         
         Wall wallData = wall.AddComponent<Wall>();
         wallData.width = scale.x;

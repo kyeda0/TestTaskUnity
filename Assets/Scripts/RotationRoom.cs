@@ -5,15 +5,15 @@ public class RotationRoom : MonoBehaviour
     [SerializeField] private Transform target;
 
     [Header("Rotation")]
-    [SerializeField] private float rotationSpeed = 5f;
-    [SerializeField] private float minVerticalAngle = -30f;
-    [SerializeField] private float maxVerticalAngle = 80f;
+    [SerializeField] private float rotationSpeed;
+    [SerializeField] private float minVerticalAngle;
+    [SerializeField] private float maxVerticalAngle;
 
     [Header("Zoom")]
-    [SerializeField] private float distance = 10f;
-    [SerializeField] private float zoomSpeed = 5f;
-    [SerializeField] private float minDistance = 3f;
-    [SerializeField] private float maxDistance = 20f;
+    [SerializeField] private float distance;
+    [SerializeField] private float zoomSpeed;
+    [SerializeField] private float minDistance;
+    [SerializeField] private float maxDistance;
 
     private float horizontalAngle;
     private float verticalAngle;
@@ -25,7 +25,7 @@ public class RotationRoom : MonoBehaviour
         verticalAngle = angles.x;
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         Rotate();
         Zoom();
@@ -47,7 +47,7 @@ public class RotationRoom : MonoBehaviour
     private void Zoom()
     {
         float scroll = Input.GetAxis("Mouse ScrollWheel");
-        distance -= scroll * zoomSpeed * 100f * Time.deltaTime;
+        distance -= scroll * zoomSpeed  * Time.deltaTime;
         distance = Mathf.Clamp(distance, minDistance, maxDistance);
     }
 
